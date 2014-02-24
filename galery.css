@@ -1,0 +1,87 @@
+body{
+    background-color: white;
+	background-size: 50px;
+    background-image: -webkit-linear-gradient(transparent 50%, rgba(200, 0, 0, .5) 50%, rgba(200, 0, 0, .5)), /*градиентик web-kit*/ 
+					-webkit-linear-gradient(0deg, transparent 50%, rgba(200, 0, 0, .5) 50%, rgba(200, 0, 0, .5));
+    background-image: -moz-linear-gradient(transparent 50%, rgba(200, 0, 0, .5) 50%, rgba(200, 0, 0, .5)), /*градиент mozila*/ 
+                      -moz-linear-gradient(0deg, transparent 50%, rgba(200, 0, 0, .5) 50%, rgba(200, 0, 0, .5));
+    background-image: -o-linear-gradient(transparent 50%, rgba(200, 0, 0, .5) 50%, rgba(200, 0, 0, .5)),  /*градиентик opera*/ 
+						-o-linear-gradient(0deg, transparent 50%, rgba(200, 0, 0, .5) 50%, rgba(200, 0, 0, .5));
+    background-image: linear-gradient(transparent 50%, rgba(200, 0, 0, .5) 50%, rgba(200, 0, 0, .5)),  /*градиент*/
+					  linear-gradient(0deg, transparent 50%, rgba(200, 0, 0, .5) 50%, rgba(200, 0, 0, .5));
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: small;
+	margin: 0px;
+	}
+	/*заголовок*/
+header{
+	margin-left: auto;
+	margin-right: auto;
+	background: none;
+	height: 100px;
+	text-align: center;
+	width: 960px;
+	}
+	/*область картинок*/
+.image-box{ 
+	margin-left: auto;
+	margin-right: auto;
+	width: 1024px;
+	padding: 10px;
+	position: relative; 
+	text-align: center;
+	
+	}
+	/* список картинок*/
+.image-box li{
+	list-style: none;
+	}
+	/*картинка*/
+.image-box img{
+	float: left;
+	border: 5px solid #ddd;
+	margin: 0 10px 5px 0;
+	width: 300px;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+	-webkit-transition-duration: 0.5s; /*Webkit: длительность анимации*/
+	-moz-transition-duration: 0.5s; /*Mozilla: длительность анимации*/
+	-o-transition-duration: 0.5s; /*Opera: длительность анимации*/
+	transition: 0.5s;
+	}
+	/* картинка в состоянии hover*/
+.image-box img:hover{
+	-webkit-transform:scale(1.5); /*Webkit: увеличиваем размер до 1.5x*/
+	-moz-transform:scale(1.5); /*Mozilla: масштабирование*/
+	-o-transform:scale(1.5); /*Opera: масштабирование*/
+	transform: scale(1.5);
+	-webkit-box-shadow:0px 0px 30px gray; /*Webkit: тени*/
+	-moz-box-shadow:0px 0px 30px gray; /*Mozilla: тени*/
+	box-shadow:0px 0px 30px gray; /*CSS3 тени: 30px размытая тень вокруг всего изображения*/
+	opacity: 1;
+	}
+	/* картинка в состоянии active*/
+.image-box img:active{
+	opacity: 1;
+	z-index: 1;
+	position: absolute;
+	left: 370px;
+	top: 150px;
+	-webkit-transform:scale(2.5); /*Webkit: увеличиваем размер до 2.5x*/
+	-moz-transform:scale(2.5); /*Mozilla: масштабирование*/
+	-o-transform:scale(2.5); /*Opera: масштабирование*/
+	transform: scale(2.5);
+	-webkit-box-shadow:0px 0px 30px gray; /*Webkit: тени*/
+	-moz-box-shadow:0px 0px 30px gray; /*Mozilla: тени*/
+	box-shadow:0px 0px 30px gray; /*CSS3 тени: 30px размытая тень вокруг всего изображения*/
+	-webkit-transition-property: width, height; /* делаем «сворачивание» изображения*/
+	-webkit-transition-duration: 2s; /* указываем, с какой скоростью нам надо увеличить изображение*/
+	-webkit-transition-delay: 0.3s; /* как долго будет думать браузер, перед тем, как развернуть фотографию*/
+	-moz-transition-property: width, height;
+	-moz-transition-duration: 2s;
+	-moz-transition-delay: 0.3s;
+	-o-transition-property:width, height;
+	-o-transition-duration: 2s;
+	-o-transition-delay: 0.3s;
+
+	}
+	
